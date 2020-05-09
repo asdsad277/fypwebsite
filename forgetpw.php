@@ -8,7 +8,7 @@
 				<label for="email">Email:</label>
 				<input type="email" class="form-control" placeholder="Enter your email of the registered account" id="ac" name="ac">
 			</div>
-		  <input type="submit" value="Send email to me!"/>		  
+		  <input type="submit" value="Send email to me!" name="submit"/>		  
 </form>
 <?php require'base/footer.php';?>
 </body>
