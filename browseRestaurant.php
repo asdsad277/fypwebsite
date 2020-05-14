@@ -1,15 +1,18 @@
 <?php require'base/header.php';?>
-<div class="container">
 	<div class="input-group mb-3">
 
 		<div class="input-group-prepend">
 			<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-				<button class="btn btn-outline-primary" type="button" data-toggle="modal" data-target="#seachRestaurant">
-				Filter</button>
+				<table>
+					<tr>
+						<td><button class="rs" type="button" data-toggle="modal" data-target="#seachRestaurant">
+								Filter</button></td>
+						<td><input type="text" class="form-control rs" placeholder="Shop name" name="Name"></td>
+						<td><button class="rs" type="submit">Search</button></td>
+					</tr>
+				</table>
 			</form>
 		</div>
-		<input type="text" class="form-control" placeholder="Search" name="Name">
-		<button class="btn btn-success" type="submit">Search</button>
 		<!-- The Modal -->
 		<div class="modal fade" id="seachRestaurant">
 			<div class="modal-dialog modal-dialog-centered">
@@ -52,41 +55,31 @@
 		</div>
 		<!-- The Modal -->
 	</div>
-	<?php
-		require("Modle/conn.php");
-		$sql = "Select * from restaurant r,shop s where r.ShopID = s.ShopID";
-		if(isset($_POST['Name'])&&$_POST['Name']!=""){
-			$sql.=" AND s.Name LIKE '%".$_POST['Name']."%'";
-		}
-		if(isset($_POST['Statis'])&&$_POST['Statis']!=""){
-			$sql.=" AND s.Statis = '".$_POST['Statis']."'";
-		}
-		if(isset($_POST['FoodType'])&&$_POST['FoodType']!=""){
-			$sql.=" AND r.FoodType = '".$_POST['FoodType']."'";
-		}
-		$rs = mysqli_query($conn, $sql) or die (mysqli_error($conn));
-		while($rc = mysqli_fetch_assoc($rs)) {
-	?>
+	<div class="divcard shops">
+        <?php
+        require("Modle/conn.php");
+        $sql = "Select * from restaurant r,shop s where r.ShopID = s.ShopID";
+        if(isset($_POST['Name'])&&$_POST['Name']!=""){
+            $sql.=" AND s.Name LIKE '%".$_POST['Name']."%'";
+        }
+        if(isset($_POST['Statis'])&&$_POST['Statis']!=""){
+            $sql.=" AND s.Statis = '".$_POST['Statis']."'";
+        }
+        if(isset($_POST['FoodType'])&&$_POST['FoodType']!=""){
+            $sql.=" AND r.FoodType = '".$_POST['FoodType']."'";
+        }
+        $rs = mysqli_query($conn, $sql) or die (mysqli_error($conn));
+        while($rc = mysqli_fetch_assoc($rs)) {
+            ?>
 			<a href="restaurantInfo.php?SID=<?=$rc['ShopID']?>">
-			<div class="restaurantList">
-			    <table>
-			        <tr>
-			            <td>
-			                <img src="img\shop\R\<?=$rc['ShopID'];?>.jpg" class="sample"></td>
-			                <td class=" font-weight-bold text-body">
-
-			                        <h1> Reataurant Name:<br /> <?=$rc['Name']?><br />
-			                        Food type:<br /><?=$rc['FoodType']?></h1>
-			                    </td>
-			        </tr>
-			    </table>
-
-			    <hr />
-			</div>
-		    </a>
-			<?php
-		}//}
-	mysqli_close($conn);
-	?>
-</div>
+				<div class="divcard shop restaurantList">
+					<div class="img">&nbsp;<img src="img\shop\R\<?=$rc['ShopID'];?>.jpg" alt=""/></div>
+					<div class="details"><?=$rc['Name']?><br><?=$rc['FoodType']?><hr /></div>
+				</div>
+			</a>
+            <?php
+        }//}
+        mysqli_close($conn);
+        ?>
+	</div>
 <?php require'base/footer.php';?>
