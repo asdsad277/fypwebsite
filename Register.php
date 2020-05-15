@@ -2,13 +2,13 @@
 <div class="container" id="effect">
 	<form action="Controllers/addAccount.php" method="Post">
 
-	<div >
+	<div class="block">
 	    <h3>Account</h3>
 	    <hr/>
 	<div class="row">
 
-	    <b class="col-sm-2">Display Name:</b>
-	    <input type="text" placeholder="Display name on the site" name="Username"  class="col-sm-3" required>*(no space inclued)
+	    <b class="col-sm-2">Username:</b>
+	    <input type="text" placeholder="Username" name="Username"  class="col-sm-3" required>*
 	</div>
 	<div class="row">
 
@@ -24,18 +24,13 @@
 	    <input type="password" placeholder="Enter your password again" name="pwdc" class="col-sm-3" required>*
 	</div>
 	<div class="row">
-	 <b class="col-sm-2">Email:</b>
-	 <input type="email" placeholder="Email" name="Email" class="col-sm-3" required>*
-	 </div>
-	    
-	<div class="row">
 	    <b class="col-sm-2">ICON:</b>
 	    <div class="custom-file col-sm-3">
 	        <input type="file" class="custom-file-input" id="customFile">
 	        <label class="custom-file-label" for="customFile">Choose file</label>
 	      </div>
 	</div>
-	<h3>Personal</h3>
+	<h3>Presonal</h3>
 	  <hr/>
 	<div class="row">
 	    <b class="col-sm-2">Firstname:</b>
@@ -66,6 +61,8 @@
 	  <hr/>
 
 	<div class="row">
+	    <b class="col-sm-2">Email:</b>
+	    <input type="email" placeholder="Email" name="Email" class="col-sm-3">
 	    <b class="col-sm-2">Tel:</b>
 	    <input type="Number" placeholder="Tel" name="Tel"  class="col-sm-3">
 	</div>

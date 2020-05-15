@@ -5,6 +5,7 @@ table{border-spacing: 1px;}
 
 /* fonting */
 *{font-family: FontAwesome, Arial, Helvetica, sans-serif;}
+a{color:#751515;}
 
 /*flex header&footer structure*/
 .viewport{
@@ -24,7 +25,6 @@ table{border-spacing: 1px;}
     align-items:stretch; align-content:stretch;
     background-color: #dcdcdc;
     border-top: 1px solid #751515; border-bottom: 1px solid #751515;
-    overflow-x: auto; 
 }
 .content{
     min-height:100%;
@@ -109,14 +109,26 @@ select.rs:hover, select.rs:focus{background-color: dimgray; color: #efefef;}
 /* ===header menu=== */
 div.header .nav-link{padding: 0 1rem;}
 div.header .dropdown-item{font-weight:600;padding: 0 1.5rem;}
-/* ===card=== */
+/* ===div display=== */
 div.tab-content{display:block;}
+div.form-group{display:block;}
+div#accordion, div.card-body{display:block;}
+div.block{display:block;}
 /* ===modal=== */
 .modal-content .modal-body{padding: 0 1rem 1rem 1rem;}
 .modal-body label {margin:.5rem;}
 /* ===search bar=== */
 .input-group {padding:1.1rem 0 0.4rem 0;}
 .input-group, .input-group-prepend,.input-group-prepend form, .input-group-prepend table{width:100%;}
+
+/* ===extra coloring=== */
+a.dropdown-item:active{background-color:#dcdcdc;color:#212529;}
+a:hover{color:#212529;}
+.nav-pills a.nav-link.active{background-color:#751515;font-weight: 600;}
+.nav-tabs .nav-link.active{font-weight: 600;}
+button.btn-primary, input.btn-primary{background-color:#751515;border-color:#751515;}
+button.btn-primary:hover, button.btn-primary:not(:disabled):not(.disabled):active, button.btn-primary:focus{background-color:dimgray;border-color:#1e1e1e;}
+input.btn-primary:hover, input.btn-primary:not(:disabled):not(.disabled):active, input.btn-primary:focus{background-color:dimgray;border-color:#1e1e1e;}
 
 /* ========================miscs======================== */
 /* =============This is for me to do coloring=========== */

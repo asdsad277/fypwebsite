@@ -1,7 +1,7 @@
 <?php require 'base/header.php'; ?>
 <div class="container" id="effect">
   <form action="Controllers/addShop.php" method="Post">
-    <div>
+    <div class="block">
       <h3>Shop</h3>
       <hr />
       <div class="row">

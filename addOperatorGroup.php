@@ -1,7 +1,7 @@
 <?php require'base/header.php';?>
 <div class="container" id="effect">
 	<form action="Controllers/addOperatorGroup.php" method="Post">
-		<div>
+		<div class="block">
 			<h3>Add Operator Group</h3>
 			<hr />
 			<div class="row">
