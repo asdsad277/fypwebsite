@@ -19,24 +19,34 @@ a{color:#751515;}
     font-weight: 600; line-height: 190% !important;
 }
 .main{
-    display:flex; background-color: #dcdcdc;
-    border-top: 1px solid #751515; border-bottom: 1px solid #751515;
+    display:flex;
     flex-direction:row; flex:1;
     justify-content:flex-start;
     align-items:stretch; align-content:stretch;
+    background-color: #dcdcdc;
+    border-top: 1px solid #751515; border-bottom: 1px solid #751515;
 }
 .content{
-    min-height:100%; height: max-content;
+    min-height:100%;
+    height: max-content;
     width:100%; min-width: 500px;
     background-color: #efefef;
     display:inline-block; 
-    padding: 10px 5%; margin: 0 0;
+    padding: 10px 5%; /* width:100%; max-width: 1201px; min-width: 1024px; */
+    margin: 0 0;
 }
-.content h1, .content h2{padding-left: 30px;}
-div{display: inline-block;}
-.right{display: inline-block; float:right;}
-div.container:first-child{padding: 2rem 1rem;}
-div.container h1:first-child, div.container h2:first-child{padding-bottom: 1rem;}
+
+.content h1, .content h2{
+    padding-left: 30px;
+}
+
+div{
+    display: inline-block;
+}
+.right{
+    display: inline-block;
+    float:right;
+}
 
 /* header customs */
 .header a {text-decoration:none;color: #efefef;}
@@ -46,19 +56,26 @@ div.container h1:first-child, div.container h2:first-child{padding-bottom: 1rem;
 
 /* select customs */
 select.rs{appearance: none; -webkit-appearance: none; -moz-appearance: none;}
-select.rs, button.rs, input.rs{width:100%;}
-select.rs, button.rs, input.rs, input[type="submit"].rs_btn{
-  height:40px; font-size: 100%; font-weight: 600;
+select.rs, button.rs, input.rs{
+  width:100%; height:40px; font-size: 100%; font-weight: 600;
   background-color: #dcdcdc; color : #2e2e2e;
   border: none; border-bottom: 2px solid #751515;
-  padding: 10px; text-align: center; text-align-last: center;
+  padding: 10px;
+  text-align: center;
+  text-align-last: center;
 }
-select.rs, button.rs, input.rs_btn {cursor: pointer;}
-input.rs{border-bottom: 2px solid dimgray;}
+select.rs, button.rs{
+    cursor: pointer;
+}
+input.rs{
+    border-bottom: 2px solid dimgray;
+}
 option.rs{
-    height: 30px;cursor: pointer; padding: 10px;
+    height: 30px;
+    cursor: pointer;
     background-color: #dcdcdc; color : #2e2e2e;
     border: none; border-bottom: 2px solid #751515;
+    padding: 10px;
 }
 select.rs:hover, select.rs:focus{background-color: dimgray; color: #efefef;}
 

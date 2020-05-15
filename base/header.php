@@ -97,7 +97,9 @@ if(isset($_SESSION['msg'])){
 		  
 		  
 					<!-------------------------------------------------------->
-					
+					<td>
+					<a class="dropdown-item" href="AI_Chat.php">AI Chat</a>
+					</td>
 					
 					
                    

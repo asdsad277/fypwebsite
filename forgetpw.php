@@ -1,4 +1,6 @@
-<?php require'base/header.php';?>
+<?php require'base/header.php';
+	  require 'Modle/conn.php';
+	  error_reporting(E_ALL ^ E_WARNING); ?>
 <div class="container">
 	<h2>So, you have come here to recover your password...</h2>
 	    <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
@@ -15,7 +17,9 @@
 	$bodycontent.="Sorry about that!\n";
 	$bodycontent.="But don’t worry! You can use the following link to reset your password:";
 	if(isset($_POST["submit"])) {
-		$mailer=$_POST["ac"];
+		$mailer	= $_POST["ac"];
+		$mailer = filter_var($mailer, FILTER_SANITIZE_EMAIL);
+		$mailer = filter_var($mailer, FILTER_VALIDATE_EMAIL);
 		if($mailer==null||$mailer==""){?>
 			<script type='text/javascript'>
 				alert('you cant enter nothing to recover your password!');
@@ -45,9 +49,15 @@
 				$key = $key . $addKey;
 				$sql1="INSERT INTO `forgetpw` (`key`,`expdate`,`email`)VALUES ('".$key."', '".$expDate."', '".$mailer."');";
 				mysqli_query($conn,$sql1);
-				$bodycontent.="\n http://seantalk.asuscomm.com/resetpw.php?key=".$key."&email=".$email;
-				$bodycontent.="\nIf you don’t use this link within 3 hours, it will expire. To get a new password reset link, visit http://seantalk.asuscomm.com/forgetpw.php";
+				$bodycontent.="\n http://seantalk.asuscomm.com/fyp/resetpw.php?key=".$key."&email=".$mailer;
+				$bodycontent.="\nIf you don’t use this link within 24 hours, it will expire. To get a new password reset link, visit http://seantalk.asuscomm.com/fyp/forgetpw.php";
 				mail($mailer,$subject,$bodycontent,$recive);
+				?>
+				<script>
+					alert('An reset password is sent to your email!');
+				</script>
+				
+				<?php
 			}
 
 		}
