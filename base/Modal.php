@@ -24,11 +24,15 @@
 				<label class="form-check-label">
 				  <input class="form-check-input" type="checkbox"> Remember me
 				</label>
+				<label class="form-check-label">
+				<a href="forgetpw.php">Forget Password</a>
+				</label>
 			  </div>
 			  
 		 </div>      
         <!-- Modal footer -->
         <div class="modal-footer">
+		
 		 <button type="submit" class="btn btn-primary">Submit</button>
 		</form>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

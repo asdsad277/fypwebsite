@@ -51,7 +51,7 @@ function writeInfo_only($sql,$table) {
     <a class="nav-link" data-toggle="tab" href="#menu1">Handle arrangement</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+    <a class="nav-link" data-toggle="tab" href="#menu2">Ticket Statistics</a>
   </li>
 </ul>
 
@@ -191,7 +191,7 @@ function writeInfo_only($sql,$table) {
 <!--Waiting list-->
 </div>
   <div class="tab-pane fade" id="menu2"><br/>
-  
+   <?php require'subpage/ticketStatistics.php';?>
   </div>
 </div>
 

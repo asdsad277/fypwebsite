@@ -1,7 +1,7 @@
 
 <?php
-    
-    $result = shell_exec("python -W ignore Chat.py ".$_POST['inp']);
+    $result =shell_exec("python Chat.py hi");
     $respon = substr($result,strpos($result,"AI: "),-1);
-    echo $respon;
+    echo $result;
+
 ?>

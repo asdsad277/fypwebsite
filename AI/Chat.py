@@ -9,8 +9,6 @@ import random
 import json
 import pickle
 
-import warnings
-warnings.filterwarnings("ignore")
 
 import sys
 inp = sys.argv[1]

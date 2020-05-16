@@ -1,7 +1,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
 <div class="container" style="position: relative; height:40vh; width:80vw">
-	<canvas id="myChart" width="400" height="400" style="border:1px solid"></canvas>
+	<canvas id="myChart" width="400" height="250" style="border:1px solid"></canvas>
 
 	<?php
 		require("Modle/conn.php");
