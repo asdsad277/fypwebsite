@@ -38,7 +38,7 @@ class DB {
 	
 	function getID($table,$col) {
 		$conn = $this->connect();
-		$sql = "Select * from ".$table;
+		$sql = "Select * from ".$table." ORDER by $col";
 		$rs = mysqli_query($conn, $sql) or die (mysqli_error($conn));
 		$ID = 1;				
 		while($rc = mysqli_fetch_assoc($rs)) {
