@@ -98,22 +98,8 @@
 
                 <hr />
                 <center><img src="img\shop\R\<?=$rc['RestaurantID']?>.jpg" class="banr"></center>
-                <table>
-                    <th colspan="3">Description</th>
-                    <tr class="text-justify">
-                        <td width=10%></td>
-                        <td width=80%>
-                            A restaurant (French: [ʁɛstoʁɑ̃] (About this soundlisten)), or an eatery,
-                            is a business that prepares and serves food and drinks to customers in exchange for money.
-                            Meals are generally served and eaten on the premises,
-                            but many restaurants also offer take-out and food delivery services.
-                            Restaurants vary greatly in appearance and offerings, including a wide variety of
-                            cuisines and service models ranging from inexpensive fast food restaurants and cafeterias,
-                            to mid-priced family restaurants, to high-priced luxury establishments.
-                        </td>
-                        <td width=10%></td>
-                    </tr>
-                </table>
+                <h3>Description</h3><p><?=$rc['Descri']?>
+				
                 <table>
                     <tr>
                         <td>Food type : </td>
@@ -220,6 +206,17 @@
 ?>
             </div>
             <div id="menu2" class="tab-pane fade"><br>
+
+            <div class="form-group">
+                    <label for="comment">Comment:</label>
+					<!--Leave Comment-->
+					<form method = "post" action = "Controllers/leaveComment.php?SID=<?=$_GET['SID']?>">
+                    <textarea class="form-control" rows="5" id="comment" name="Comment"></textarea><br />
+					<input type="submit" value="Send" class="btn btn-primary"/>
+					</form>
+					<!--Leave Comment-->
+                  </div>
+
                 <div class="mt-3">
                     <br />
 					
@@ -245,15 +242,7 @@
 						 <!--Comment-->
                     
                 </div>
-                <div class="form-group">
-                    <label for="comment">Comment:</label>
-					<!--Leave Comment-->
-					<form method = "post" action = "Controllers/leaveComment.php?SID=<?=$_GET['SID']?>">
-                    <textarea class="form-control" rows="5" id="comment" name="Comment"></textarea><br />
-					<input type="submit" value="Send" class="btn btn-primary"/>
-					</form>
-					<!--Leave Comment-->
-                  </div>
+                
             </div>
 
             <div id="menu3" class="tab-pane fade">

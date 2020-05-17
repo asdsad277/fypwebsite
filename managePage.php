@@ -51,7 +51,7 @@ function writeInfo_only($sql,$table) {
     <a class="nav-link" data-toggle="tab" href="#menu1">Handle arrangement</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#menu2">Ticket Statistics</a>
+    <a class="nav-link" data-toggle="tab" href="#menu2">Statistic</a>
   </li>
 </ul>
 
@@ -74,6 +74,7 @@ function writeInfo_only($sql,$table) {
 						<hr />
 						<?php
 						writeInfo("SELECT Name FROM shop where shopID = '".$_GET['SID']."'","Shop");
+						writeInfo("SELECT Descri FROM shop where shopID = '".$_GET['SID']."'","Shop");
 						writeInfo_only("SELECT OperatorGroupID FROM shop where shopID = '".$_GET['SID']."'","Shop")
 						?>
 						<br/>
@@ -121,13 +122,13 @@ function writeInfo_only($sql,$table) {
 	?>
 	
 	
-			<button type='button' class='btn btn-primary' onClick='document.location.href="Controllers/CompletTicket.php?SID=<?=$_GET['SID']?>"'>Complet</button> 
-			<button type='button' class='btn btn-primary' onClick='document.location.href="Controllers/SkipTicket.php?SID=<?=$_GET['SID']?>"'>Delet</button>
+			<button type='button' class='btn btn-primary' onClick='document.location.href="Controllers/CompletTicket.php?SID=<?=$_GET['SID']?>"'>Complete</button> 
+			<button type='button' class='btn btn-primary' onClick='document.location.href="Controllers/SkipTicket.php?SID=<?=$_GET['SID']?>"'>Delete</button>
 			<button type='button' class='btn btn-secondary' onClick='document.location.href="Controllers/undoNextTicket.php?SID=<?=$_GET['SID']?>"'>Back</button>
 	<?php
 		}else{
 	?>
-      <p class="card-text">Some example text. Some example text.</p>
+      <p class="card-text">Press the button to select the top queue of the customer!</p>
 	    <button type='button' class='btn btn-primary' onClick='document.location.href="Controllers/NextTicket.php?SID=<?=$_GET['SID']?>"'>Next</button><br /><br />
 	  <div class="custom-control custom-switch">
     <input type="checkbox" class="custom-control-input" id="switch1">
@@ -191,7 +192,7 @@ function writeInfo_only($sql,$table) {
 <!--Waiting list-->
 </div>
   <div class="tab-pane fade" id="menu2"><br/>
-   <?php require'subpage/ticketStatistics.php';?>
+  <?php require'subpage/ticketStatistics.php';?>
   </div>
 </div>
 

@@ -82,6 +82,9 @@
         </tr><tr>
             <td>Use a GUI for ticketing, avoid displaying too much complex data, and make instant changes easy.</td>
         </tr>
+		<tr>
+            <td><img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40asdsad277/fypsecond-351895407c5e4c70b079d9e9c641e197-signed.apk" height="100" width="100"/></td><td style="font-size:30px">Scan for the app</td>
+        </tr>
     </table>
 </div>
 

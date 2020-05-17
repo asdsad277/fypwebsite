@@ -9,6 +9,7 @@
         <b class="col-sm-2">Shop Name:</b>
         <input type="text" placeholder="Shop Name" name="Name" class="col-sm-3" required>*
       </div>
+	 
       <div class="row">
 
         <b class="col-sm-2">Operator Group:</b>
@@ -72,6 +73,12 @@
           <input type="file" class="custom-file-input" id="customFile">
           <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
+      </div>
+	   <div class="row">
+
+        <b class="col-sm-2">Description:</b>
+		<textarea  placeholder="Shop Description" name="Description" class="col-sm-3"></textarea>
+        
       </div>
       <h3>Contact</h3>
       <hr />
