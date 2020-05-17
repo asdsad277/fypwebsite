@@ -6,7 +6,7 @@ session_start();
 		$db = new DB();
 		
 		$shopID = $db->getID('Shop','ShopID');
-		$value = "'".$shopID."','".$_POST['Name']."','".$_POST['Address']."','C','".$_POST['Email']."','".$_POST['Tel']."','".$_POST['OperatorGroup']."','".$_POST['Type']."'";
+		$value = "'".$shopID."','".$_POST['Name']."','".$_POST['Address']."','C','".$_POST['Email']."','".$_POST['Tel']."','".$_POST['OperatorGroup']."','".$_POST['Type']."','".$_POST['Description']."'";
 		echo $value;
 		
 			
